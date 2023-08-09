@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Real Estate Agent</title>
+</head>
+<body>
+    <header>
+        <!-- Navigation links here -->
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="property1.html">Property 1</a>
+            <a href="property2.html">Property 2</a>
+            <a href="property3.html">Property 3</a>
+            <a href="properties.html">Available Properties</a>
+            <a href="contact.html">Contact</a>
+            <a href="credits.html">Credits</a>
+        </nav>
+    </header>
+    <main>
+        <section class="contact-form">
+            <h1>Contact Us</h1>
+            <form id="contactForm" onsubmit="return validateForm()">
+                <div class="form-group">
+                    <label for="firstName">First Name:</label>
+                    <input type="text" id="firstName" required>
+                </div>
+                <div class="form-group">
+                    <label for="lastName">Last Name:</label>
+                    <input type="text" id="lastName" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone:</label>
+                    <input type="tel" id="phone" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="propertyType">Type of Property:</label>
+                    <select id="propertyType" required>
+                        <option value="">Select Property Type</option>
+                        <option value="house">House</option>
+                        <option value="condo">Condominium</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="bedrooms">Number of Bedrooms:</label>
+                    <input type="number" id="bedrooms" required>
+                </div>
+                <div class="form-group">
+                    <label for="bathrooms">Number of Bathrooms:</label>
+                    <input type="number" id="bathrooms" required>
+                </div>
+                <div class="form-group">
+                    <label for="priceRange">Price Range:</label>
+                    <input type="text" id="priceRange" required>
+                </div>
+                <div class="form-group">
+                    <label for="comments">Additional Comments:</label>
+                    <textarea id="comments"></textarea>
+                </div>
+                <div class="form-group">
+                    <button type="submit">Submit</button>
+                </div>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>Reach out to us at <a href="walter-white">my-email</a> or <a href="tel:123-456-7890">123-456-7890</a>.</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
