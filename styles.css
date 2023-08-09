@@ -164,8 +164,27 @@ nav a {
 
 
 /* Media queries for responsive design */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 400px) {
     .thumbnails {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(1, 1fr); /* Adjust the layout for smaller screens */
     }
+    /* Adjustments for smaller screens */
+    nav {
+        flex-direction: column;
+    }
+}
+
+/* Styles for screen sizes between 401px and 768px */
+@media screen and (min-width: 401px) and (max-width: 768px) {
+    .thumbnails {
+        grid-template-columns: repeat(2, 1fr); /* Adjust the layout for medium-sized screens */
+    }
+    /* Adjustments for medium-sized screens */
+    nav {
+        flex-direction: row;
+    }
+}
+
+/* Styles for screen sizes greater than 768px */
+@media screen and (min-width: 769px) {
 }
