@@ -1,4 +1,12 @@
 // JavaScript for the contact form
+document.addEventListener('DOMContentLoaded', function() {
+    const contactForm = document.getElementById('contactForm');
+
+    if (contactForm) {
+        contactForm.addEventListener('submit', validateForm);
+    }
+});
+
 function validateForm(event) {
     event.preventDefault(); // Prevent the form from submitting
 
@@ -42,5 +50,3 @@ function validateForm(event) {
 
     return false; // Prevent form submission
 }
-
-document.getElementById('contactForm').addEventListener('submit', validateForm);
