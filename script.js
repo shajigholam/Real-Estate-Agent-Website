@@ -1,12 +1,4 @@
 // JavaScript for the contact form
-document.addEventListener('DOMContentLoaded', function() {
-    const contactForm = document.getElementById('contactForm');
-
-    if (contactForm) {
-        contactForm.addEventListener('submit', validateForm);
-    }
-});
-
 function validateForm(event) {
     event.preventDefault(); // Prevent the form from submitting
 
@@ -19,7 +11,27 @@ function validateForm(event) {
     const bathrooms = document.getElementById('bathrooms').value;
     const priceRange = document.getElementById('priceRange').value;
 
-    if (!firstName || !lastName || !phone || !email || !propertyType || !bedrooms || !bathrooms || !priceRange) {
+    // Regular expressions for validation
+    const nameRegex = /^[A-Za-z\s]+$/;
+    const phoneRegex = /^\d{10}$/;
+    const emailRegex = /^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Z|a-z]{2,}$/;
+
+    if (!firstName.match(nameRegex) || !lastName.match(nameRegex)) {
+        alert('Please enter valid first and last names.');
+        return false;
+    }
+
+    if (!phone.match(phoneRegex)) {
+        alert('Please enter a valid 10-digit phone number.');
+        return false;
+    }
+
+    if (!email.match(emailRegex)) {
+        alert('Please enter a valid email address.');
+        return false;
+    }
+
+    if (!propertyType || !bedrooms || !bathrooms || !priceRange) {
         alert('Please fill out all fields.');
         return false;
     }
@@ -40,7 +52,7 @@ function validateForm(event) {
         Price Range: ${priceRange}
     `;
 
-    // Send email (Note: This is a simplified example)
+    // Send email
     const mailtoLink = `mailto:${agentEmail}?subject=Contact Form Submission&body=${encodeURIComponent(emailBody)}`;
 
     // Display success prompt
@@ -50,3 +62,5 @@ function validateForm(event) {
 
     return false; // Prevent form submission
 }
+
+document.getElementById('contactForm').addEventListener('submit', validateForm);
