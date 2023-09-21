@@ -12,3 +12,5 @@ Contact Form Page: Includes a form for visitors to express property preferences,
 Site Map and Credits Page: Lists website links and credits sources for graphics and property information.
 
 CSS and JavaScript are organized in separate files, and all resources are credited. The goal is to create an inviting online presence for the agent.
+
+In order to make the real estate agent's website accessible via a public URL, I implemented a static hosting solution. The chosen hosting service for this project is Netlify (https://www.netlify.com/), a reputable and free hosting platform.
