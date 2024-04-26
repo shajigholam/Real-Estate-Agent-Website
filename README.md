@@ -15,4 +15,4 @@ CSS and JavaScript are organized in separate files, and all resources are credit
 
 In order to make the real estate agent's website accessible via a public URL, I implemented a static hosting solution. The chosen hosting service for this project is Netlify (https://www.netlify.com/), a reputable and free hosting platform.
 
-Here is the link to Real Estate Agent Website: https://keen-sawine-04a87c.netlify.app/
+Here is the link to Real Estate Agent Website: https://real-estate-04a87c.netlify.app
